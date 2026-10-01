@@ -161,7 +161,7 @@ export function format(
       if (ignoreZero) {
         let cont = true;
         while (cont) {
-          if (!Number(arr[arr.length - 1])) arr.pop();
+          if (arr.length && !Number(arr[arr.length - 1])) arr.pop();
           else cont = false;
         }
       }
