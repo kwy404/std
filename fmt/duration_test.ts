@@ -89,6 +89,7 @@ Deno.test({
   name: "format() handles digital style ignore zero with zero duration",
   fn() {
     assertEquals(format(0, { ignoreZero: true, style: "digital" }), "");
+    assertEquals(format(1e-7, { ignoreZero: true, style: "digital" }), "");
   },
 });
 
